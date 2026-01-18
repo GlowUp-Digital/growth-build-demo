@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Request Information - Growth Build | GlowUp Digital</title>
+<meta name="description" content="Request information about the Growth Build by GlowUp Digital. Demo preview only.">
+<link rel="stylesheet" href="css/styles.css">
+<style>
+  /* Custom popup styling */
+  #demoPopup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background:#E0D9D9;
+    padding:20px 30px;
+    border-radius:10px;
+    color:#2F5755;
+    font-weight:bold;
+    box-shadow:0 4px 12px rgba(0,0,0,.25);
+    z-index:1000;
+    text-align:center;
+  }
+  #popupOkBtn {
+    padding:8px 16px;
+    background:#5A9690;
+    color:#fff;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    font-weight:bold;
+    margin-top:15px;
+  }
+  #demoPopup.show { display:block; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-container">
+    <div class="company-name">DemoCorp</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+
+<section class="hero">
+<div class="container">
+<h1>Let’s Talk About Your Website</h1>
+<p class="subtitle">
+This short form helps determine whether the Growth Build is the right fit for your business.
+</p>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+<h2>Request Information</h2>
+<p>This is a demo preview form. No data is sent or stored.</p>
+
+<form id="contactForm" class="demo-form">
+
+  <label for="name">Your Name</label>
+  <input type="text" id="name" placeholder="John Smith" required />
+
+  <label for="email">Email Address</label>
+  <input type="email" id="email" placeholder="you@business.com" required />
+
+  <label for="business">Business Name</label>
+  <input type="text" id="business" placeholder="Your Business Name" />
+
+  <label for="website">Website (if you have one)</label>
+  <input type="url" id="website" placeholder="https://example.com" />
+
+  <label for="goal">What are you looking to achieve?</label>
+  <textarea id="goal" name="goal" rows="4" placeholder="More enquiries, better structure, clearer messaging…"></textarea>
+
+  <button type="submit" class="btn">Submit Request</button>
+
+</form>
+</div>
+</section>
+
+<section class="section demo">
+<div class="container">
+<h2>Demo Notice</h2>
+<p>This form is for demonstration purposes only.</p>
+<p>In a live Growth Build, this form would include:</p>
+<ul>
+<li>Secure PHP form handling.</li>
+<li>Spam and bot protection.</li>
+<li>Email notifications.</li>
+<li>Server-side validation.</li>
+<li>Analytics event tracking.</li>
+</ul>
+</div>
+</section>
+
+<section class="cta">
+<div class="container">
+<h2>Ready for a Real Build?</h2>
+<p>This demo shows structure and flow only. A production site is custom-built, secured, and tailored to your business goals.</p>
+<a href="https://glowupdigital.infinityfreeapp.com/contact" class="btn">Contact GlowUp Digital</a>
+</div>
+</section>
+
+<footer>© GlowUp Digital - Growth Build Demo Preview</footer>
+
+<!-- CUSTOM DEMO POPUP -->
+<div id="demoPopup">
+Demo only. No information was sent.<br>
+<button id="popupOkBtn">OK</button>
+</div>
+
+<!-- DEMO SCRIPT -->
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  const popup=document.getElementById("demoPopup");
+  popup.classList.add("show");
+  document.getElementById("popupOkBtn").onclick=function(){
+    window.location.href="index.html";
+  };
+});
+</script>
+
+</body>
+</html>
